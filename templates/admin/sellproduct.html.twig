@@ -1,0 +1,26 @@
+{% extends '@EasyAdmin/layout.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+  <div class="content">
+    <section class="content-header">
+      <div class="d-flex flex-row justify-content-between align-content-center w-100">
+        <div class="content-header-title">
+          <h1 class="title">
+            Vendre produit</h1>
+        </div>
+      </div>
+    </section>
+    <section id="main" class="content-body">
+        <div class="col-md-4">
+            <form action="{{path('sellmyproduct', {id : product.id})}}" class="mt-4" method="POST">
+              <input name="prixVente" type="text" class="form-control" required>
+              <button class="btn btn-primary mt-4">Vendre</button>
+            </form>
+        </div>
+    </section>
+  </div>
+
+{% endblock %}
