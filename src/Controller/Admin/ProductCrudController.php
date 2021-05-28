@@ -50,7 +50,7 @@ class ProductCrudController extends AbstractCrudController
             AssociationField::new('type'),
             TextEditorField::new('description'),
             MoneyField::new('prixAchat')->setCurrency('DZD'),
-            MoneyField::new('prixVente')->setCurrency('DZD'),
+            MoneyField::new('prixVente')->setCurrency('DZD')->onlyOnIndex(),
             TextField::new('status')->onlyOnIndex(),
         ];
     }

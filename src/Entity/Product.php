@@ -154,11 +154,9 @@ class Product
 
     public function getStatus(): ?string
     {
-        if ($this->status = 0) {
-            return 'Acheté';
-        }elseif ($this->status = 1) {
-            return 'Vendu';
-        }
+        $string_status[0] = 'Acheté';
+        $string_status[1] = 'Vendu';
+        return   $string_status[$this->status];
     }
 
     public function setStatus(int $status): self
