@@ -58,6 +58,11 @@ class Product
      */
     private $status = 0;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $quantity;
+
     public function __construct()
     {
         $this->dateAchat = new \DateTime();
@@ -162,6 +167,18 @@ class Product
     public function setStatus(int $status): self
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function getQuantity(): ?int
+    {
+        return $this->quantity;
+    }
+
+    public function setQuantity(int $quantity): self
+    {
+        $this->quantity = $quantity;
 
         return $this;
     }
